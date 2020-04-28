@@ -1,0 +1,8 @@
+version: '3'
+services:
+  grib2json-docker:
+    image: nakkim/grib2json-docker
+    command: grib2json --names --data --fp 2 --fs 103 --fv 10.0 --output /usr/local/data/outputdata.json /usr/local/data/wafsgfs_L_t06z_intdsk60.grib2
+    volumes:
+      - .:/usr/local/data  
+
